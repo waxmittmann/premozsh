@@ -25,10 +25,11 @@ alias pgu='sudo su postgres'
 
 # view cheatsheet
 alias cheat='atom /home/max/Workspaces/Misc/zshCheatsheet.md'
+alias catcheat='cat /home/max/Workspaces/Misc/zshCheatsheet.md'
 
 # Sbt stuff
-alias sbtt='sbt -mem 4000'
-alias sbtr='sbt -mem 4000 "run local.conf"'
+alias sbtt='sbt -mem 8000'
+alias sbtr='sbt -mem 8000 "run local.conf"'
 
 # Npm / Frontend stuff
 alias npmi='npm install'
@@ -40,6 +41,10 @@ alias venv='source ~/nowgo-tests-env/bin/activate'
 
 # Run redis
 alias redis='redis-server'
+
+
+function gcheatfn () { catcheat | grep $1 }
+alias gcheat=gcheatfn
 
 # Temporary links, review occasionally
 
